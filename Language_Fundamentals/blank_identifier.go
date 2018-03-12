@@ -1,4 +1,4 @@
-package Language_Fundamentals
+package main
 
 import (
 	"fmt"
