@@ -9,11 +9,11 @@ type Square struct {
 	side float64
 }
 
-type Circle struct{
+type Circle struct {
 	radius float64
 }
 
-func (r Circle) area()float64{
+func (r Circle) area() float64 {
 	return math.Pi * r.radius * r.radius
 }
 
@@ -35,4 +35,5 @@ func main() {
 	c := Circle{45}
 	info(s)
 	info(c)
+	fmt.Printf("%T \n", Shape(c))
 }
