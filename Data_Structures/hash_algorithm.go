@@ -18,13 +18,13 @@ func main() {
 	scanner.Split(bufio.ScanWords)
 	buckets := make([]int, 12)
 	for scanner.Scan() {
-		n := HashBucket(scanner.Text(), 12)
+		n := hashBucket(scanner.Text(), 12)
 		buckets[n]++
 	}
 	fmt.Println(buckets[65:123])
 }
 
-func HashBucket(word string, buckets int) int {
+func hashBucket(word string, buckets int) int {
 	letter := int(word[0])
 	bucket := letter % buckets
 	return bucket

@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-var X int = 0
+var x int
 
 func increment() int {
-	X--
-	return X
+	x--
+	return x
 }
 
 func main() {

@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 func main() {
-	c := FanIn(boring("Joe"), boring("Barry"))
+	c := fanIn(boring("Joe"), boring("Barry"))
 	for i := 0; i < 10; i++ {
 		fmt.Println(<-c)
 	}
@@ -25,7 +25,7 @@ func boring(msg string) <-chan string {
 	return c
 }
 
-func FanIn(input1, input2 <-chan string) <-chan string {
+func fanIn(input1, input2 <-chan string) <-chan string {
 	c := make(chan string)
 	go func() {
 		for {

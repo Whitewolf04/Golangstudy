@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-type People struct {
+type people struct {
 	First       string
 	Last        string `json: "-"`
 	Age         int    `json: "wisdom score"`
@@ -13,7 +13,7 @@ type People struct {
 }
 
 func main() {
-	p1 := People{"James", "Bond", 42, 007}
+	p1 := people{"James", "Bond", 42, 007}
 	bs, _ := json.Marshal(p1)
 	fmt.Println(bs)
 	fmt.Printf("%T \n", bs)

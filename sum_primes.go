@@ -2,17 +2,15 @@ package main
 
 import "fmt"
 
-func main() {
-	primenumbers := make([]int, 100)
-	var sum int
-	for i := 0; i < 2000000; i++ {
-		if i%2 != 0 && i%3 != 0 && i%5 != 0 && i%7 != 0 {
-			primenumbers = append(primenumbers, i)
+func checkPrimeNumber(num int) bool {
+	for i := 2; i < 2000000; i++ {
+		if num%i != 0 {
+			return true
 		}
 	}
-	fmt.Println(primenumbers)
-	for _, v := range primenumbers {
-		sum = sum + v + 3 + 5 + 2 + 7
-	}
-	fmt.Println(sum)
+	return false
+}
+
+func main() {
+	fmt.Println(checkPrimeNumber(12))
 }

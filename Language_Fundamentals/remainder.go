@@ -6,7 +6,7 @@ func main() {
 	x := 547 / 17
 	fmt.Println(x)
 
-	var y *int = &x
+	var y = &x
 	*y = 547 % 17
 	fmt.Println(x)
 }

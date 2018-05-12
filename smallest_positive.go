@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt")
+	"fmt"
+)
 
 func main() {
 	SliceOfNumber := make([]int, 0)

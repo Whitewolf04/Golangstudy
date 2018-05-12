@@ -16,13 +16,13 @@ type bullshit struct {
 	Big bool
 }
 
-func ShitCharacteristics(a interface{}) {
+func shitCharacteristics(a interface{}) {
 	fmt.Println(a)
 }
 
 func main() {
 	Eric := dogshit{shit{"crap"}, true}
 	Dylan := bullshit{shit{"nice"}, false}
-	ShitCharacteristics(Eric)
-	ShitCharacteristics(Dylan)
+	shitCharacteristics(Eric)
+	shitCharacteristics(Dylan)
 }

@@ -7,19 +7,19 @@ import (
 	"fmt"
 )
 
-type Humanity struct {
+type humanity struct {
 	Name   string
 	Age    int
 	Status string
 }
 
 func secondary() {
-	p1 := Humanity{"Tuan", 25, "Married"}
+	p1 := humanity{"Tuan", 25, "Married"}
 	json.NewEncoder(os.Stdout).Encode(p1)
 }
 
 func main(){
-	var p1 Humanity
+	var p1 humanity
 	rdr := strings.NewReader(`{"Name": "Tuan", "Age": 25, "Status": "Married"}`)
 	json.NewDecoder(rdr).Decode(&p1)
 
