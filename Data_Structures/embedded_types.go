@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 type doubleZero struct {
-	Person
+	person
 	LicenseToKill bool
 }
 
 func main() {
 	p1 := doubleZero{
-		Person: Person{
+		person: person{
 			First: "James",
 			Last:  "Bond",
 			Age:   45,
@@ -17,7 +17,7 @@ func main() {
 		LicenseToKill: true,
 	}
 	p2 := doubleZero{
-		Person: Person{
+		person: person{
 			First: "Miss",
 			Last:  "Moneypie",
 			Age:   19,
