@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func checkPrimeNumber(num int) bool {
+func CheckPrimeNumber(num int) bool {
 	for i := 2; i <= num/2; i++ {
 		if num%i == 0 {
 			return false
@@ -26,7 +26,7 @@ func calculator(n chan int) chan int {
 	total := make(chan int)
 	go func() {
 		for v := range n {
-			if checkPrimeNumber(v) == true {
+			if CheckPrimeNumber(v) == true {
 				total <- v
 			}
 		}
