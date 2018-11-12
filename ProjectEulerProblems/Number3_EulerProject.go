@@ -1,5 +1,4 @@
 package main
-
 import "fmt"
 
 func numberGen()chan int{ //generate numbers
